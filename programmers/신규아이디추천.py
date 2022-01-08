@@ -22,8 +22,6 @@ def solution(new_id):
         if answer[i] == ".":               
             if answer[i-1] != answer[i]:
                 temp += answer[i]
-            else:
-                continue
         else:
             temp += answer[i]
     if len(answer)!=1:
