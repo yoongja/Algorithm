@@ -1,18 +1,25 @@
-
 N = int(input())
 
-arr = list(map(int,input().split(' ')))#소수 판별 리스
+arr = list(map(int,input().split(' ')))#소수 판별 리스트
 
-tf = False
-cnt = 0 #소수개수 구하기
+cnt = 0 
+arr_tf =[]
+tf_count = 0
 
-for i in arr: #arr숫자 하나씩 비교
+for i in arr:
+    tf = True
     if i != 1:
-        for j in range(2,i):#시간복잡도 고려 하여 제곱근까지
-            if i%j==0:
+        for j in range(2,i):
+            if i % j == 0 :
+                tf = False
                 break
-            else:
-                cnt += 1
+    else:
+        tf = False
+    arr_tf.append(tf)
 
-print(cnt)
+for i in range(N):
+    if arr_tf[i]==True:
+        tf_count += 1
+print(tf_count)
+
             
