@@ -7,5 +7,4 @@ for i in range(hour+1):
         for k in range(60):
             if '3' in str(i)+str(j)+str(k):
                 cnt += 1
-                print(f'{i}시{j}분{k}초')
 print(cnt)

@@ -1,19 +1,18 @@
-N = int(input())
-plan = input().split()
+n = int(input())
 
-X,Y=1,1
-
-dx = [0,0,-1,1]
+dx = [0,0,-1,1]#왼,오,위,아래
 dy = [-1,1,0,0]
-draw = ['L','R','U','D']
+move_types = ['L','R','U','D']
+x,y = 1,1
+plans = input.split()
 
-for i in plan:
-    find= draw.index(i)
-    
-    if X+dx[find]<1 or Y+dy[find]<1 or X+dx[find]>N or Y+dy[find]>N:
-        continue
+for plan in plans:
+    for i in range(len(move_types)):
+        if plan == move_types[i]:
+            nx = x + dx[i]
+            ny = y + dy[i]
 
-    X = X+dx[find]
-    Y = Y+dy[find]
-
-print(X,Y)
+    if nx<1 or ny<1 or nx>n or ny>n:
+        continue #정사각형을 벗어나는 움직임은 무시된다
+    x,y = nx,ny
+print(nx,ny)
