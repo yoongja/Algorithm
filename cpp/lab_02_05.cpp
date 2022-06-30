@@ -16,7 +16,7 @@ int main(){
     swap_call_by_value(x,y);
     cout<<"swap_call_by_value 함수 사용 후"<<endl<<"x = "<<x<<", y ="<<y<<endl<<endl;
     cout<<"swap_call_by_reference 함수 사용 전"<<endl<<"x = "<<x<<", y ="<<y<<endl;
-    swap_call_by_reference(&x,&y);
+    swap_call_by_reference(x,y);
     cout<<"swap_call_by_reference 함수 사용 후"<<endl<<"x = "<<x<<", y ="<<y;
     return 0;
 }
